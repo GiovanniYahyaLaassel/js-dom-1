@@ -10,4 +10,17 @@ pButton.addEventListener('click', function() {
     lamp.src = './img/yellow_lamp.png';
     // modifco la scritta del button
     pButton.textContent = 'Spegni';
+
+    // Inserimento di una funzione accendi e spegni
+    pButton.addEventListener('click', function(){
+        if(lamp.src.includes('./img/yellow_lamp.png')) {
+            // la lampadina sarà spenta 
+            lamp.src = './img/white_lamp.png';
+            pButton.textContent = 'Accendi';
+        } else { 
+            lamp.src = './img/yellow_lamp.png';
+            pButton.textContent = 'Spegni';
+
+        }
+    })
 });
